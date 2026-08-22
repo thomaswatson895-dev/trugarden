@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Lawn Care Pricing | TruGreen</title>
+    <meta name="description"
+      content="At TruGreen, we know what’s best for your lawn. Get an instant price estimate for your customized lawn care services today!">
+    <link rel="icon" href="https://www.trugreen.com/images/favicon.ico"
+      type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="buy-flow-page">
+
+    <!-- Multi-Step Header & Progress Bar -->
+    <header class="buy-flow-header">
+      <div class="buy-flow-top-bar">
+        <div class="buy-flow-back-btn" id="btnPrevStep"
+          style="visibility:hidden;">
+          ‹ <span>Back</span>
+        </div>
+        <div class="buy-flow-title" id="stepCounterText">Step 1 of 5</div>
+        <a href="index.html" class="buy-flow-close-btn"
+          aria-label="Close quote flow">✕</a>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width: 20%;"></div>
+      </div>
+    </header>
+
+    <!-- Step Content Container -->
+    <main class="step-container">
+
+      <!-- STEP 1: PERSONAL INFORMATION -->
+      <div class="step-card active-step" id="step1">
+        <h2 class="step-heading">Let's get started with your info.</h2>
+        <p class="step-subheading">Enter your contact details to calculate your
+          custom web exclusive quote and lock in 15% savings.</p>
+
+        <div
+          style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div class="form-group">
+            <label for="stepFirstName">First Name*</label>
+            <input type="text" id="stepFirstName" class="form-control"
+              placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="stepLastName">Last Name*</label>
+            <input type="text" id="stepLastName" class="form-control"
+              placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px;">
+          <label for="stepPhone">Mobile Phone Number*</label>
+          <input type="tel" id="stepPhone" class="form-control"
+            placeholder="(555) 000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="stepEmail">Email Address*</label>
+          <input type="email" id="stepEmail" class="form-control"
+            placeholder="john.doe@example.com" required>
+        </div>
+      </div>
+
+      <!-- STEP 2: PROPERTY LOCATION -->
+      <div class="step-card" id="step2">
+        <h2 class="step-heading">Where is your lawn located?</h2>
+        <p class="step-subheading">Enter your property address so we can
+          customize a plan for your local soil & climate.</p>
+
+        <div class="form-group">
+          <label for="stepAddress">Property Street Address*</label>
+          <input type="text" id="stepAddress" class="form-control"
+            placeholder="e.g. 1790 Kirby Parkway" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="stepApt">Apt / Unit (Optional)</label>
+            <input type="text" id="stepApt" class="form-control"
+              placeholder="Apt 4B">
+          </div>
+          <div class="form-group">
+            <label for="stepZip">5-Digit ZIP Code*</label>
+            <input type="text" id="stepZip" class="form-control"
+              placeholder="38138" maxlength="5" pattern="\d{5}" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: YARD SIZE & LAWN CONCERNS -->
+      <div class="step-card" id="step3">
+        <h2 class="step-heading">Tell us about your property.</h2>
+        <p class="step-subheading">Select your estimated lot size and primary
+          lawn challenges.</p>
+
+        <label
+          style="font-weight:700; margin-bottom:10px; display:block;">Estimated
+          Lawn Size</label>
+        <div class="option-grid">
+          <div class="select-card selected">
+            <div class="select-card-title">Small Lawn</div>
+            <div class="select-card-desc">Up to 5,000 sq ft (Standard suburban
+              lot)</div>
+          </div>
+          <div class="select-card">
+            <div class="select-card-title">Medium Lawn</div>
+            <div class="select-card-desc">5,000 – 10,000 sq ft (1/4 to 1/2
+              acre)</div>
+          </div>
+          <div class="select-card">
+            <div class="select-card-title">Large Lawn</div>
+            <div class="select-card-desc">10,000 – 20,000 sq ft (1/2 to 1
+              acre)</div>
+          </div>
+          <div class="select-card">
+            <div class="select-card-title">Extra Large</div>
+            <div class="select-card-desc">20,000+ sq ft (Over 1 acre)</div>
+          </div>
+        </div>
+
+        <label style="font-weight:700; margin-bottom:10px; display:block;">What
+          are your main lawn goals?</label>
+        <div class="option-grid multi-select">
+          <div class="select-card selected">
+            <div class="select-card-title">🌱 Weeds & Dandelions</div>
+            <div class="select-card-desc">Eliminate crabgrass, broadleaf weeds,
+              and dandelions.</div>
+          </div>
+          <div class="select-card selected">
+            <div class="select-card-title">🌿 Thicker, Greener Grass</div>
+            <div class="select-card-desc">Fill in bare patches and boost grass
+              density.</div>
+          </div>
+          <div class="select-card">
+            <div class="select-card-title">🐛 Pests & Insects</div>
+            <div class="select-card-desc">Stop grubs, chinch bugs, and
+              lawn-damaging pests.</div>
+          </div>
+          <div class="select-card">
+            <div class="select-card-title">🦟 Mosquito Defense</div>
+            <div class="select-card-desc">Keep mosquitoes out of outdoor living
+              spaces.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: PLAN SELECTION -->
+      <div class="step-card" id="step4">
+        <h2 class="step-heading">Choose your tailored plan.</h2>
+        <p class="step-subheading">Your 15% Web Exclusive Discount has been
+          applied automatically!</p>
+
+        <div class="option-grid" style="grid-template-columns: 1fr;">
+          <div class="select-card selected">
+            <span class="badge-discount">SAVE 15% ONLINE</span>
+            <div class="select-card-title" style="font-size:1.3rem;">TruPro℠
+              Plan <span class="badge-top-pick"
+                style="vertical-align:middle; margin-left:6px;">Top
+                Pick</span></div>
+            <div class="select-card-desc">8 Annual Visits • Fertilization, Weed
+              Control, Insect Defense, Soil Enhancer, Core Aeration &
+              Overseeding</div>
+            <div class="select-card-price">$49.50 <span
+                style="font-size:0.85rem; color:var(--tg-text-muted); font-weight:normal;">/
+                visit</span></div>
+          </div>
+
+          <div class="select-card">
+            <span class="badge-discount">SAVE 15% ONLINE</span>
+            <div class="select-card-title" style="font-size:1.3rem;">TruCore℠
+              Plan</div>
+            <div class="select-card-desc">6 Annual Visits • Fertilization, Weed
+              Control, Insect Defense, Soil Enhancer</div>
+            <div class="select-card-price">$39.20 <span
+                style="font-size:0.85rem; color:var(--tg-text-muted); font-weight:normal;">/
+                visit</span></div>
+          </div>
+
+          <div class="select-card">
+            <span class="badge-discount">SAVE 15% ONLINE</span>
+            <div class="select-card-title" style="font-size:1.3rem;">TruNatural®
+              Organic Plan</div>
+            <div class="select-card-desc">6 Annual Visits • 100% Organic
+              Plant-Based Nutrients</div>
+            <div class="select-card-price">$44.00 <span
+                style="font-size:0.85rem; color:var(--tg-text-muted); font-weight:normal;">/
+                visit</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5: SUMMARY & CONFIRMATION -->
+      <div class="step-card" id="step5">
+        <h2 class="step-heading">Review & Confirm Your Quote</h2>
+        <p class="step-subheading">Review your customized plan quote details
+          below.</p>
+
+        <div
+          style="background:var(--tg-light-dew); padding:24px; border-radius:16px; border:1px solid var(--tg-border); margin-bottom:24px;">
+          <div
+            style="font-weight:800; font-size:1.2rem; color:var(--tg-dark-green); margin-bottom:12px; border-bottom:1px solid var(--tg-border); padding-bottom:10px;">
+            Customer Summary
+          </div>
+          <div
+            style="display:flex; flex-direction:column; gap:8px; font-size:0.95rem; color:var(--tg-text-main);">
+            <div><strong>Name:</strong> <span id="summaryName">John
+                Doe</span></div>
+            <div><strong>Contact:</strong> <span
+                id="summaryContact">john.doe@example.com</span></div>
+            <div><strong>Address:</strong> <span id="summaryAddress">1790 Kirby
+                Parkway, 38138</span></div>
+            <div><strong>Selected Plan:</strong> <strong
+                style="color:var(--tg-green);">TruPro℠ Plan ($49.50 /
+                visit)</strong></div>
+            <div><strong>Web Exclusive Discount:</strong> <span
+                style="color:var(--tg-leaf-green); font-weight:700;">15% OFF
+                Applied</span></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Fixed Bottom Navigation Bar -->
+    <footer class="buy-flow-bottom-bar">
+      <div class="container">
+        <div style="color:var(--tg-text-muted); font-size:0.9rem;">
+
+        </div>
+        <div>
+          <button class="btn btn-primary" id="btnNextStep"
+            style="padding:14px 36px; font-size:1.05rem;">Next Step ›</button>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
